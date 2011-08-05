@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+   <main>
+       <index>
+           <label>Accueil</label>
+           <route>index</route>     
+           <controller>index</controller>  
+           <action>index</action>
+       </index>
+       
+       <product>
+           <label>Catégories</label>
+           <route>categories</route>     
+           <controller>shop</controller>  
+           <action>allcategories</action>
+       </product>
+       
+       <listProduct>
+           <label>Liste Produits</label>
+		   <route>allProducts</route>     
+           <controller>shop</controller>  
+           <action>allproducts</action>
+       </listProduct>
+       
+       <productsByCatId>
+           <label>Produits par Catégorie</label>
+		   <uri>/shop/productsbycatid</uri>
+       </productsByCatId>
+       
+       <about>
+           <label>About</label>
+           <route>about</route>     
+           <controller>index</controller>  
+           <action>about</action>
+       </about>
+       
+       
+       
+       <!--
+           <pages>
+               <produit1>
+                   <label>Produit 1</label>
+                   <route>product</route>     
+                   <controller>shop</controller>  
+                   <action>product</action>
+                   <params>
+                        <id>1</id>
+                   </params>
+               </produit1>
+               <produit2>
+                   <label>Produit 2</label>
+                   <route>product</route>     
+                   <controller>shop</controller>  
+                   <action>product</action>
+                   <params>
+                        <id>2</id>
+                   </params>
+               </produit2>
+           
+           </pages>       
+       -->
+       
+   </main>
+</config>

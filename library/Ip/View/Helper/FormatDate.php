@@ -32,11 +32,6 @@ class Ip_View_Helper_FormatDate extends Zend_View_Helper_Abstract
      */
     public function formatDate($date)
     {
-    	include_once 'Zend/Date.php';
-
-	    $newDate = new Zend_Date($date, Zend_Date::ISO_8601);
-	    $newDate->setTimezone('Europe/Paris');
-	    return $newDate->toString(Zend_Date::DATETIME);
-	}
-
+        return 'Jeudi 12 Novembre';
+    }
 }

@@ -1,37 +1,69 @@
 <?php echo $this->doctype(). PHP_EOL ?>
-    <head>
-        <!-- Meta -->
-        <?php $this->headTitle()->setSeparator(' - ');
+
+<head>
+<?php $this->headTitle()->setSeparator(' - ');
               $this->headTitle('Mon site');
               echo $this->headTitle() . PHP_EOL;
               
-              $this->headLink()->appendStylesheet('/css/reset.css', 'all');
-              $this->headLink()->appendStylesheet('/css/fonts.css', 'all');
+
+		     echo $this->navigation()
+		               ->links(Zend_Registry::get('navigation'));
+
+		
               $this->headLink()->appendStylesheet('/css/style.css', 'all');
               echo $this->headLink() . PHP_EOL;
               
               $this->headScript()->appendFile('/js/less-grid-4.js', 'text/javascript');
-              $this->headScript()->appendFile("http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js","text/javascript");
               echo $this->headScript() . PHP_EOL;
               
               $this->headMeta()->setHttpEquiv('Content-type', 'text/html; charset=utf-8');
               echo $this->headMeta() . PHP_EOL;
-              
-              
-        ?>
-    </head>
-
-    <body>
-    <h4>App5.  IP FORMATION</h4>
-    <ul id="topNav">
-
-    </ul>
-    <div id="page">
-		<?php echo $this->layout()->content?>
+             ?>
+</head>
+<body id="body">
+<div id="top">
+	<div id="top_content">
+		<div id="logo">
+			<h1>IP Formation</h1>
+			
+		</div>
 	</div>
-	<div id="footer">
-        <p>Application PHP 5</p>
-     </div>
-    </body>
+</div>
+<div class="menu">
+	<div class="menu_content">
+		<?php 
+		echo $this->navigation()
+		     ->menu(Zend_Registry::get('navigation'))
+		?>
+	</div>
+</div>
 
+<div id="video">
+	<div id="breadcrumbs">
+	<a href="/">Mon site ZF</a> / 
+	<?php 
+			echo $this->navigation()
+			          ->breadcrumbs(Zend_Registry::get('navigation'))
+			          ->setSeparator(' / ')
+			          ->setMinDepth(0);
+			?>
+	</div>	
+	<div id="video_content">
+			<h2>Cours Zend Framework</h2>
+			<h3></h3>
+
+	</div>
+</div>
+<div id="content">
+	<?php echo $this->layout()->content?>
+</div>
+<div id="bottom">
+	<div id="bottom_content">
+		<div class="callcenter">
+			<p class="call_us" style="color:#e44038;padding-left:30px;">Support 24/7: </p>
+			<p class="call_us"><img src="/img/phone.png" alt="phone" />  (045)0205968600 or (045)0205968611</p>
+			<p class="call_us"><img src="/img/email.png" alt="email" />  contact@contact.com</p>
+
+		</div>
 </html>
+

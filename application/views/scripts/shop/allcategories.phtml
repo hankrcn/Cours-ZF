@@ -1,0 +1,8 @@
+<ul>
+<?php
+$this->headTitle('Categorie');
+foreach ($this->categories as $category){
+	echo '<li>'. $category->getLabel() . '</li>'; 
+}
+?>
+</ul>

@@ -1,0 +1,8 @@
+<ul>
+<?php
+$this->headTitle('Liste Produits');
+foreach ($this->products as $product){
+	echo '<li>'. $product->getLabel() . ' => ' . $product->getDesc() . '</li>';
+}
+?>
+</ul>

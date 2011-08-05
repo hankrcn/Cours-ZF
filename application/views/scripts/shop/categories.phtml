@@ -1,0 +1,6 @@
+<p>catégories</p>
+<ul>
+	<?php foreach ($this->categories as $category): ?>
+	<li><?php echo $category->getLabel(); ?></li>
+	<?php endforeach; ?>
+</ul>
